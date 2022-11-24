@@ -1,5 +1,7 @@
-import { Counter } from "./counter";
+import { Spinner, SpinnerType, SpinnerSizeType } from './components';
 
 export {
-  Counter
+  Spinner,
+  SpinnerType, 
+  SpinnerSizeType,
 }
