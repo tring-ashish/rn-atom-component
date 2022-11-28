@@ -1,7 +1,14 @@
-import { Spinner, SpinnerType, SpinnerSizeType } from './components';
-
+// <--------- Components --------->
 export {
   Spinner,
-  SpinnerType, 
+  IconButton,
+  TringImage,
+} from './components/index'
+
+
+// <--------- Types --------->
+export {
+  SpinnerType,
   SpinnerSizeType,
-}
+  TringImageProps
+} from './components/index'
