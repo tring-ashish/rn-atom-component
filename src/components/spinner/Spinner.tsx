@@ -1,5 +1,11 @@
-import { View, ActivityIndicator, StyleProp, ViewStyle, StyleSheet } from 'react-native'
-import React from 'react'
+import {
+  View,
+  ActivityIndicator,
+  StyleProp,
+  ViewStyle,
+  StyleSheet,
+} from 'react-native';
+import React from 'react';
 
 export enum SpinnerSizeType {
   large = 'large',
@@ -10,7 +16,7 @@ export type SpinnerType = {
   containerStyle?: StyleProp<ViewStyle>;
   color?: string;
   size?: SpinnerSizeType;
-}
+};
 
 export const Spinner = ({
   containerStyle,
@@ -18,16 +24,18 @@ export const Spinner = ({
   size = SpinnerSizeType.large,
 }: SpinnerType) => {
   return (
-    <View testID={'loading_view'}
-      style={StyleSheet.flatten([loadingStateStyle.container, containerStyle])}>
+    <View
+      testID={'loading_view'}
+      style={StyleSheet.flatten([loadingStateStyle.container, containerStyle])}
+    >
       <ActivityIndicator
         testID={'activityIndicator'}
         size={size}
         color={color}
       />
     </View>
-  )
-}
+  );
+};
 
 export const loadingStateStyle = StyleSheet.create({
   container: {

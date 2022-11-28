@@ -1,7 +1,9 @@
-import { Spinner, SpinnerType, SpinnerSizeType } from './components';
-
-export {
+import {
   Spinner,
-  SpinnerType, 
+  SpinnerType,
   SpinnerSizeType,
-}
+  Label,
+  Dropdown,
+} from './components';
+
+export { Spinner, SpinnerType, SpinnerSizeType, Label, Dropdown };
