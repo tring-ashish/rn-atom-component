@@ -3,6 +3,8 @@ export {
   Spinner,
   IconButton,
   TringImage,
+  Label,
+  Dropdown,
 } from './components/index'
 
 
