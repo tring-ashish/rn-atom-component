@@ -33,7 +33,7 @@ export const Dropdown: FC<Props> = ({ label, data, onSelect }) => {
 
   const onItemPress = (item): void => {
     setSelected(item);
-    if(onSelect){
+    if (onSelect) {
       onSelect(item);
     }
     setVisible(false);
