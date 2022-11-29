@@ -1,6 +1,10 @@
 import React, { FunctionComponent, useState } from 'react';
 import { StyleSheet, Image as DefaultImage } from 'react-native';
-import FastImage, { ImageStyle, ResizeMode, Source } from 'react-native-fast-image';
+import FastImage, {
+  ImageStyle,
+  ResizeMode,
+  Source,
+} from 'react-native-fast-image';
 import { isNotEmpty, isNonEmptyArray } from 'src/shared/utils';
 
 const DEFAULT_IMAGE_SIZE = 24;
@@ -18,7 +22,6 @@ export interface TringImageProps extends Omit<ImageStyle, 'source'> {
   resizeMode?: ResizeMode;
   defaultImageStyle?: ImageStyle;
 }
-
 
 export const TringImage: FunctionComponent<TringImageProps> = ({
   name,
@@ -48,28 +51,39 @@ export const TringImage: FunctionComponent<TringImageProps> = ({
     backgroundColor,
   };
 
-  let isValidImageUrl = true
-  const imageUrlPathArray: any = isNotEmpty(url) && url?.split('/')
-  if (!imageUrlPathArray || !isNonEmptyArray(imageUrlPathArray)
-    || imageUrlPathArray.length < 3 || !isNotEmpty(imageUrlPathArray[3])) {
-    isValidImageUrl = false
+  let isValidImageUrl = true;
+  const imageUrlPathArray: any = isNotEmpty(url) && url?.split('/');
+  if (
+    !imageUrlPathArray ||
+    !isNonEmptyArray(imageUrlPathArray) ||
+    imageUrlPathArray.length < 3 ||
+    !isNotEmpty(imageUrlPathArray[3])
+  ) {
+    isValidImageUrl = false;
   }
 
   if (!isNotEmpty(name) && !isValidImageUrl) {
     name = fallback && fallbackSource ? fallbackSource : null;
   }
 
-  const onLoadEnd = () => setIsLoadEnd(true)
+  const onLoadEnd = () => setIsLoadEnd(true);
 
   return (
     <>
-      {!isLoadEnd && fallback && fallbackSource && <DefaultImage
-        source={fallbackSource}
-        style={[imageStyle, borderStyle, styles.defaultImage, defaultImageStyle]}
-      />}
+      {!isLoadEnd && fallback && fallbackSource && (
+        <DefaultImage
+          source={fallbackSource}
+          style={[
+            imageStyle,
+            borderStyle,
+            styles.defaultImage,
+            defaultImageStyle,
+          ]}
+        />
+      )}
       <FastImage
         style={StyleSheet.flatten([imageStyle, borderStyle, style])}
-        source={name ? name : (showPlaceholder ? fallbackSource : { uri: url })}
+        source={name ? name : showPlaceholder ? fallbackSource : { uri: url }}
         onError={() => !name && setShowPlaceholder(true)}
         resizeMode={resizeMode}
         onLoadEnd={onLoadEnd}
@@ -89,5 +103,5 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     width: '100%',
     height: '100%',
-  }
-})
+  },
+});
