@@ -24,7 +24,13 @@ interface DropDownProps {
   listContainerStyle?: StyleProp<ViewStyle>;
 }
 
-export const Dropdown: FC<DropDownProps> = ({ label, data, onSelect, mainContainerStyle, listContainerStyle, }) => {
+export const Dropdown: FC<DropDownProps> = ({
+  label,
+  data,
+  onSelect,
+  mainContainerStyle,
+  listContainerStyle,
+}) => {
   const DropdownButton = useRef<any>();
 
   const [visible, setVisible] = useState(false);
