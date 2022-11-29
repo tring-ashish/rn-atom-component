@@ -6,12 +6,17 @@ export {
   Label,
   Dropdown,
   Button,
-  CheckBox
-} from './components/index';
+  InputField,
+  DashedLine,
+} from './components/index'
+
 
 // <--------- Types --------->
 export {
   SpinnerType,
   SpinnerSizeType,
   TringImageProps,
-} from './components/index';
+  InputFieldProps,
+  DashedLineType,
+  DashedLineAxisType,
+} from './components/index'
