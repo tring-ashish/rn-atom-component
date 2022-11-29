@@ -6,6 +6,7 @@ export {
   Label,
   Dropdown,
   Button,
+  CheckBox
 } from './components/index';
 
 // <--------- Types --------->
