@@ -6,11 +6,15 @@ export {
   Label,
   Dropdown,
   Button,
-} from './components/index';
+  DashedLine,
+} from './components/index'
+
 
 // <--------- Types --------->
 export {
   SpinnerType,
   SpinnerSizeType,
   TringImageProps,
-} from './components/index';
+  DashedLineType,
+  DashedLineAxisType,
+} from './components/index'

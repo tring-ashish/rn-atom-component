@@ -14,6 +14,7 @@ interface IconButtonProps {
   icon: () => void;
   testId?: string;
   hitSlop?: Insets;
+  activeOpacity?: number;
 }
 
 export const IconButton: FunctionComponent<IconButtonProps> = ({
@@ -22,6 +23,7 @@ export const IconButton: FunctionComponent<IconButtonProps> = ({
   icon,
   testId,
   hitSlop = DEFAULT_HIT_SLOP,
+  activeOpacity = 0.8,
 }) => {
   return (
     <TouchableOpacity
@@ -29,8 +31,14 @@ export const IconButton: FunctionComponent<IconButtonProps> = ({
       style={style}
       onPress={onPress}
       testID={testId}
+      activeOpacity={activeOpacity}
     >
       {icon && icon()}
     </TouchableOpacity>
   );
 };
+
+{/* <IconButton
+icon={() => <InstagramIcon width={socialIconSize} height={socialIconSize} />}
+onPress={() => openSocialMedia(SocialMediaType.instagram)}
+/> */}

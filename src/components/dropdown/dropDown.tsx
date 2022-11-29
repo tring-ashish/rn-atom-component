@@ -7,6 +7,8 @@ import {
   Modal,
   View,
   ListRenderItem,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 
 interface DropDownItemProps {
@@ -23,7 +25,13 @@ interface DropDownProps {
   itemStyle?: StyleProp<ViewStyle>;
 }
 
-export const Dropdown: FC<DropDownProps> = ({ label, data, onSelect }) => {
+export const Dropdown: FC<DropDownProps> = ({
+  label,
+  data,
+  onSelect,
+  mainContainerStyle,
+  listContainerStyle,
+}) => {
   const DropdownButton = useRef<any>();
 
   const [visible, setVisible] = useState(false);
