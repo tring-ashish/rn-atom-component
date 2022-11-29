@@ -6,18 +6,30 @@ import {
   TouchableOpacity,
   Modal,
   View,
+  ListRenderItem,
 } from 'react-native';
 
-interface Props {
+interface DropDownItemProps {
   label: string;
-  data: Array<{ label: string; value: string }>;
-  onSelect?: (item: { label: string; value: string }) => void;
+  value: string;
 }
 
-export const Dropdown: FC<Props> = ({ label, data, onSelect }) => {
-  const DropdownButton = useRef();
+interface DropDownProps {
+  label: string;
+  data: Array<DropDownItemProps>;
+  onSelect?: (item: { label: string; value: string }) => void;
+  mainContainerStyle?: StyleProp<ViewStyle>;
+  listContainerStyle?: StyleProp<ViewStyle>;
+  itemStyle?: StyleProp<ViewStyle>;
+}
+
+export const Dropdown: FC<DropDownProps> = ({ label, data, onSelect }) => {
+  const DropdownButton = useRef<any>();
+
   const [visible, setVisible] = useState(false);
-  const [selected, setSelected] = useState(undefined);
+  const [selected, setSelected] = useState<DropDownItemProps | undefined>(
+    undefined
+  );
   const [dropdownTop, setDropdownTop] = useState(0);
 
   const toggleDropdown = (): void => {
@@ -25,13 +37,15 @@ export const Dropdown: FC<Props> = ({ label, data, onSelect }) => {
   };
 
   const openDropdown = (): void => {
-    DropdownButton.current.measure((_fx, _fy, _w, h, _px, py) => {
-      setDropdownTop(py + h);
-    });
+    DropdownButton.current.measure(
+      (_fx: any, _fy: any, _w: any, h: any, _px: any, py: any) => {
+        setDropdownTop(py + h);
+      }
+    );
     setVisible(true);
   };
 
-  const onItemPress = (item): void => {
+  const onItemPress = (item: DropDownItemProps) => {
     setSelected(item);
     if (onSelect) {
       onSelect(item);
@@ -39,7 +53,7 @@ export const Dropdown: FC<Props> = ({ label, data, onSelect }) => {
     setVisible(false);
   };
 
-  const renderItem = ({ item }): ReactElement<any, any> => (
+  const renderItem: ListRenderItem<DropDownItemProps> = ({ item }) => (
     <TouchableOpacity style={styles.item} onPress={() => onItemPress(item)}>
       <Text>{item.label}</Text>
     </TouchableOpacity>
@@ -49,14 +63,20 @@ export const Dropdown: FC<Props> = ({ label, data, onSelect }) => {
     return (
       <Modal visible={visible} transparent animationType="none">
         <TouchableOpacity
-          style={styles.overlay}
+          style={StyleSheet.flatten([styles.overlay, mainContainerStyle])}
           onPress={() => setVisible(false)}
         >
-          <View style={[styles.dropdown, { top: dropdownTop }]}>
+          <View
+            style={StyleSheet.flatten([
+              styles.dropdown,
+              listContainerStyle,
+              { top: dropdownTop },
+            ])}
+          >
             <FlatList
               data={data}
               renderItem={renderItem}
-              keyExtractor={(item, index) => index.toString()}
+              keyExtractor={(_, index) => index.toString()}
             />
           </View>
         </TouchableOpacity>
@@ -74,7 +94,6 @@ export const Dropdown: FC<Props> = ({ label, data, onSelect }) => {
       <Text style={styles.buttonText}>
         {(selected && selected.label) || label}
       </Text>
-      {/* <Icon  name="chevron-down" /> */}
     </TouchableOpacity>
   );
 };

@@ -1,11 +1,18 @@
-import {
+// <--------- Components --------->
+export {
   Spinner,
-  SpinnerType,
-  SpinnerSizeType,
+  IconButton,
+  TringImage,
   Label,
   Dropdown,
-  InputFieldProps,
-  InputField
-} from './components';
+  Button,
+  InputField,
+} from './components/index';
 
-export { Spinner, SpinnerType, SpinnerSizeType, Label, Dropdown, InputField, InputFieldProps };
+// <--------- Types --------->
+export {
+  SpinnerType,
+  SpinnerSizeType,
+  TringImageProps,
+  InputFieldProps,
+} from './components/index';
