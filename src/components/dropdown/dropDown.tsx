@@ -22,7 +22,6 @@ interface DropDownProps {
   onSelect?: (item: { label: string; value: string }) => void;
   mainContainerStyle?: StyleProp<ViewStyle>;
   listContainerStyle?: StyleProp<ViewStyle>;
-  itemStyle?: StyleProp<ViewStyle>;
 }
 
 export const Dropdown: FC<DropDownProps> = ({
