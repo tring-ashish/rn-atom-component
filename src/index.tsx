@@ -5,12 +5,12 @@ export {
   TringImage,
   Label,
   Dropdown,
-} from './components/index'
-
+  Button,
+} from './components/index';
 
 // <--------- Types --------->
 export {
   SpinnerType,
   SpinnerSizeType,
-  TringImageProps
-} from './components/index'
+  TringImageProps,
+} from './components/index';

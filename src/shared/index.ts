@@ -1,5 +1,1 @@
-export {
-    isNotEmpty,
-    isObjectNonEmpty,
-    isNonEmptyArray,
-} from './utils';
+export { isNotEmpty, isObjectNonEmpty, isNonEmptyArray } from './utils';

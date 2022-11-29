@@ -11,20 +11,25 @@ import {
 
 interface DropDownItemProps {
   label: string;
-  value: string
+  value: string;
 }
 
 interface DropDownProps {
   label: string;
   data: Array<DropDownItemProps>;
   onSelect?: (item: { label: string; value: string }) => void;
+  mainContainerStyle?: StyleProp<ViewStyle>;
+  listContainerStyle?: StyleProp<ViewStyle>;
+  itemStyle?: StyleProp<ViewStyle>;
 }
 
 export const Dropdown: FC<DropDownProps> = ({ label, data, onSelect }) => {
   const DropdownButton = useRef<any>();
 
   const [visible, setVisible] = useState(false);
-  const [selected, setSelected] = useState<DropDownItemProps | undefined>(undefined);
+  const [selected, setSelected] = useState<DropDownItemProps | undefined>(
+    undefined
+  );
   const [dropdownTop, setDropdownTop] = useState(0);
 
   const toggleDropdown = (): void => {
@@ -32,9 +37,11 @@ export const Dropdown: FC<DropDownProps> = ({ label, data, onSelect }) => {
   };
 
   const openDropdown = (): void => {
-    DropdownButton.current.measure((_fx: any, _fy: any, _w: any, h: any, _px: any, py: any) => {
-      setDropdownTop(py + h);
-    });
+    DropdownButton.current.measure(
+      (_fx: any, _fy: any, _w: any, h: any, _px: any, py: any) => {
+        setDropdownTop(py + h);
+      }
+    );
     setVisible(true);
   };
 
@@ -56,10 +63,16 @@ export const Dropdown: FC<DropDownProps> = ({ label, data, onSelect }) => {
     return (
       <Modal visible={visible} transparent animationType="none">
         <TouchableOpacity
-          style={styles.overlay}
+          style={StyleSheet.flatten([styles.overlay, mainContainerStyle])}
           onPress={() => setVisible(false)}
         >
-          <View style={[styles.dropdown, { top: dropdownTop }]}>
+          <View
+            style={StyleSheet.flatten([
+              styles.dropdown,
+              listContainerStyle,
+              { top: dropdownTop },
+            ])}
+          >
             <FlatList
               data={data}
               renderItem={renderItem}
