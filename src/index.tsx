@@ -1,9 +1,16 @@
-import {
+// <--------- Components --------->
+export {
   Spinner,
-  SpinnerType,
-  SpinnerSizeType,
+  IconButton,
+  TringImage,
   Label,
   Dropdown,
-} from './components';
+} from './components/index'
 
-export { Spinner, SpinnerType, SpinnerSizeType, Label, Dropdown };
+
+// <--------- Types --------->
+export {
+  SpinnerType,
+  SpinnerSizeType,
+  TringImageProps
+} from './components/index'
