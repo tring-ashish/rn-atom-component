@@ -4,6 +4,8 @@ import {
   SpinnerSizeType,
   Label,
   Dropdown,
+  InputFieldProps,
+  InputField
 } from './components';
 
-export { Spinner, SpinnerType, SpinnerSizeType, Label, Dropdown };
+export { Spinner, SpinnerType, SpinnerSizeType, Label, Dropdown, InputField, InputFieldProps };
