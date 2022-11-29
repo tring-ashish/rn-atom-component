@@ -38,7 +38,9 @@ export const IconButton: FunctionComponent<IconButtonProps> = ({
   );
 };
 
-{/* <IconButton
+{
+  /* <IconButton
 icon={() => <InstagramIcon width={socialIconSize} height={socialIconSize} />}
 onPress={() => openSocialMedia(SocialMediaType.instagram)}
-/> */}
+/> */
+}

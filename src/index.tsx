@@ -8,8 +8,7 @@ export {
   Button,
   InputField,
   DashedLine,
-} from './components/index'
-
+} from './components/index';
 
 // <--------- Types --------->
 export {
@@ -19,4 +18,4 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
-} from './components/index'
+} from './components/index';
