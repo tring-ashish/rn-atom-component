@@ -9,7 +9,7 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '^src(\\/?.*)$': '<rootDir>/src/$1',
-    '\\.svg': '<rootDir>/__mocks__/svgMock.js'
+    '\\.svg': '<rootDir>/__mocks__/svgMock.js',
   },
   coverageThreshold: {
     global: {
@@ -19,5 +19,5 @@ module.exports = {
   collectCoverageFrom: ['**/*.tsx', '**/*.ts', '!src/assets/**'],
   collectCoverage: true,
   // testResultsProcessor: 'jest-sonar-reporter', //TODO: Need to enable once we setup sonar
-  testTimeout: 20000
+  testTimeout: 20000,
 };
