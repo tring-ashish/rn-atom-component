@@ -6,4 +6,8 @@ export { Dropdown } from './dropdown/dropDown';
 export { Button } from './button/button';
 export { CheckBox } from './checkBox/checkBox';
 export { InputField, InputFieldProps } from './inputField/inputField';
-export { DashedLine, DashedLineType, DashedLineAxisType } from './dashedLine/DashedLine';
+export {
+  DashedLine,
+  DashedLineType,
+  DashedLineAxisType,
+} from './dashedLine/DashedLine';

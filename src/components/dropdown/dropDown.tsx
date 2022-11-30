@@ -7,8 +7,9 @@ import {
   Modal,
   View,
   ListRenderItem,
-  StyleProp,
   ViewStyle,
+  TextStyle,
+  StyleProp,
 } from 'react-native';
 
 interface DropDownItemProps {
@@ -20,6 +21,7 @@ interface DropDownProps {
   label: string;
   data: Array<DropDownItemProps>;
   onSelect?: (item: { label: string; value: string }) => void;
+  itemStyle?: StyleProp<TextStyle>;
   mainContainerStyle?: StyleProp<ViewStyle>;
   listContainerStyle?: StyleProp<ViewStyle>;
 }
@@ -30,6 +32,7 @@ export const Dropdown: FC<DropDownProps> = ({
   onSelect,
   mainContainerStyle,
   listContainerStyle,
+  itemStyle,
 }) => {
   const DropdownButton = useRef<any>();
 
@@ -61,7 +64,11 @@ export const Dropdown: FC<DropDownProps> = ({
   };
 
   const renderItem: ListRenderItem<DropDownItemProps> = ({ item }) => (
-    <TouchableOpacity style={styles.item} onPress={() => onItemPress(item)}>
+    <TouchableOpacity
+      testID="renderItemTouchableOpacity1"
+      style={StyleSheet.flatten([styles.item, itemStyle])}
+      onPress={() => onItemPress(item)}
+    >
       <Text>{item.label}</Text>
     </TouchableOpacity>
   );
@@ -70,6 +77,7 @@ export const Dropdown: FC<DropDownProps> = ({
     return (
       <Modal visible={visible} transparent animationType="none">
         <TouchableOpacity
+          testID="renderDropdownTouchableOpacity"
           style={StyleSheet.flatten([styles.overlay, mainContainerStyle])}
           onPress={() => setVisible(false)}
         >
@@ -93,6 +101,7 @@ export const Dropdown: FC<DropDownProps> = ({
 
   return (
     <TouchableOpacity
+      testID="mainTouchableOpacity"
       ref={DropdownButton}
       style={styles.button}
       onPress={toggleDropdown}

@@ -8,8 +8,7 @@ export {
   Button,
   InputField,
   DashedLine,
-} from './components/index'
-
+} from './components/index';
 
 // <--------- Types --------->
 export {
