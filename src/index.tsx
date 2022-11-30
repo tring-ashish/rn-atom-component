@@ -18,4 +18,4 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
-} from './components/index';
+} from './components/index'
