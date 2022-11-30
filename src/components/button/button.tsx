@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import React, { FC } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   title: string;
   onPress: () => void;
   containerStyle?: StyleProp<ViewStyle>;

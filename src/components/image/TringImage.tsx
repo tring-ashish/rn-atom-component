@@ -5,7 +5,7 @@ import FastImage, {
   ResizeMode,
   Source,
 } from 'react-native-fast-image';
-import { isNotEmpty, isNonEmptyArray } from 'src/shared/utils';
+import { isNotEmpty, isNonEmptyArray } from '../../shared/utils';
 
 const DEFAULT_IMAGE_SIZE = 24;
 const DEFAULT_RADIUS_DIVIDER = 2;
