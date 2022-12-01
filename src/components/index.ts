@@ -11,3 +11,4 @@ export {
   DashedLineType,
   DashedLineAxisType,
 } from './dashedLine/DashedLine';
+export { WrappedList}  from './wrappedList/wrappedList';

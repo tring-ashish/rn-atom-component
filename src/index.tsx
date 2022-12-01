@@ -8,7 +8,9 @@ export {
   Button,
   InputField,
   DashedLine,
-} from './components/index';
+  WrappedList,
+} from './components/index'
+
 
 // <--------- Types --------->
 export {
