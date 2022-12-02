@@ -11,3 +11,4 @@ export {
   DashedLineType,
   DashedLineAxisType,
 } from './dashedLine/DashedLine';
+export { HorizontalProgress, HorizontalProgressProps } from './horizontalProgress/HorizontalProgress';

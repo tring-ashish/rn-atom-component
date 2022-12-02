@@ -8,6 +8,7 @@ export {
   Button,
   InputField,
   DashedLine,
+  HorizontalProgress,
 } from './components/index';
 
 // <--------- Types --------->
@@ -18,4 +19,5 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
+  HorizontalProgressProps,
 } from './components/index'
