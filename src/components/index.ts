@@ -20,3 +20,4 @@ export {
   DividerSolidLine,
   DividerSolidLineProps,
 } from './dividerSolidLine/dividerSolidLine';
+export { HorizontalProgress, HorizontalProgressProps } from './horizontalProgress/HorizontalProgress';
