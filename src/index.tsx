@@ -8,6 +8,7 @@ export {
   Button,
   InputField,
   DashedLine,
+  HeaderAppBar,
 } from './components/index';
 
 // <--------- Types --------->
@@ -18,4 +19,5 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
-} from './components/index'
+  HeaderAppBarProps,
+} from './components/index';
