@@ -8,6 +8,7 @@ export {
   Button,
   InputField,
   DashedLine,
+  HeaderAppBar,
   DividerSolidLine,
 } from './components/index';
 
@@ -19,6 +20,7 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
+  HeaderAppBarProps,
   DividerSolidLineProps,
   DropDownProps,
   DropDownItemProps,

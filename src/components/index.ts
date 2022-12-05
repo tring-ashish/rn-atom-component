@@ -15,6 +15,7 @@ export {
   DashedLineType,
   DashedLineAxisType,
 } from './dashedLine/DashedLine';
+export { HeaderAppBar, HeaderAppBarProps } from './headerAppBar/headerAppBar';
 export {
   DividerSolidLine,
   DividerSolidLineProps,
