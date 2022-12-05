@@ -10,6 +10,7 @@ export {
   DashedLine,
   HeaderAppBar,
   DividerSolidLine,
+  HorizontalProgress,
 } from './components/index';
 
 // <--------- Types --------->
@@ -26,4 +27,5 @@ export {
   DropDownItemProps,
   LabelProps,
   ButtonProps,
-} from './components/index';
+  HorizontalProgressProps,
+} from './components/index'
