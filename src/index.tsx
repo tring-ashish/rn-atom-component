@@ -8,6 +8,7 @@ export {
   Button,
   InputField,
   DashedLine,
+  DividerSolidLine,
 } from './components/index';
 
 // <--------- Types --------->
@@ -18,4 +19,9 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
-} from './components/index'
+  DividerSolidLineProps,
+  DropDownProps,
+  DropDownItemProps,
+  LabelProps,
+  ButtonProps,
+} from './components/index';
