@@ -3,6 +3,7 @@ export {
   Spinner,
   IconButton,
   TringImage,
+  CheckBox,
   Label,
   Dropdown,
   Button,
