@@ -21,3 +21,4 @@ export {
   DividerSolidLineProps,
 } from './dividerSolidLine/dividerSolidLine';
 export { HorizontalProgress, HorizontalProgressProps } from './horizontalProgress/HorizontalProgress';
+export { WrappedList}  from './wrappedList/wrappedList';

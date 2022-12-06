@@ -11,6 +11,7 @@ export {
   HeaderAppBar,
   DividerSolidLine,
   HorizontalProgress,
+  WrappedList,
 } from './components/index';
 
 // <--------- Types --------->
