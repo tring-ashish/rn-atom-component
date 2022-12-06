@@ -12,12 +12,12 @@ import {
   StyleProp,
 } from 'react-native';
 
-interface DropDownItemProps {
+export interface DropDownItemProps {
   label: string;
   value: string;
 }
 
-interface DropDownProps {
+export interface DropDownProps {
   label: string;
   data: Array<DropDownItemProps>;
   onSelect?: (item: { label: string; value: string }) => void;

@@ -8,9 +8,11 @@ export {
   Button,
   InputField,
   DashedLine,
+  HeaderAppBar,
+  DividerSolidLine,
+  HorizontalProgress,
   WrappedList,
-} from './components/index'
-
+} from './components/index';
 
 // <--------- Types --------->
 export {
@@ -20,4 +22,11 @@ export {
   InputFieldProps,
   DashedLineType,
   DashedLineAxisType,
+  HeaderAppBarProps,
+  DividerSolidLineProps,
+  DropDownProps,
+  DropDownItemProps,
+  LabelProps,
+  ButtonProps,
+  HorizontalProgressProps,
 } from './components/index'
