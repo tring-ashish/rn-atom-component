@@ -12,6 +12,8 @@ export {
   DividerSolidLine,
   HorizontalProgress,
   WrappedList,
+  WidgetHeader,
+  NavigationHeader,
 } from './components/index';
 
 // <--------- Types --------->
@@ -29,4 +31,6 @@ export {
   LabelProps,
   ButtonProps,
   HorizontalProgressProps,
-} from './components/index'
+  WidgetHeaderProps,
+  NavigationHeaderProps,
+} from './components/index';
