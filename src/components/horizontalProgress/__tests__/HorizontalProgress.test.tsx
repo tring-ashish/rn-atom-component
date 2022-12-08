@@ -1,6 +1,6 @@
-import {render, RenderAPI} from '@testing-library/react-native';
+import { render, RenderAPI } from '@testing-library/react-native';
 import React from 'react';
-import {HorizontalProgress} from '../HorizontalProgress';
+import { HorizontalProgress } from '../HorizontalProgress';
 
 describe('<HorizontalProgress />', () => {
   let instance: RenderAPI;
