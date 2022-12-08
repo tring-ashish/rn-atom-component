@@ -15,6 +15,8 @@ export {
   WrappedList,
   WidgetHeader,
   NavigationHeader,
+  MultipleSelectList,
+  UnderLinedButton,
 } from './components/index';
 
 // <--------- Types --------->
@@ -34,4 +36,8 @@ export {
   HorizontalProgressProps,
   WidgetHeaderProps,
   NavigationHeaderProps,
+  MultipleSelectListDataProps,
+  MultipleSelectListProps,
+  UnderLinedButtonProps,
+  textDecorationStyleType,
 } from './components/index';
