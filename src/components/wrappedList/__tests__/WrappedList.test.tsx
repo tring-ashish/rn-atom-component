@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, RenderAPI } from '@testing-library/react-native';
-import { WrappedList } from '../WrappedList';
+import { WrappedList } from '../wrappedList';
 import { TouchableOpacity } from 'react-native';
 
 describe('<<< WrappedList >>>', () => {

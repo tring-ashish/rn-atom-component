@@ -12,6 +12,7 @@ export {
   DividerSolidLine,
   HorizontalProgress,
   WrappedList,
+  VideoPlayer,
 } from './components/index';
 
 // <--------- Types --------->
@@ -29,4 +30,5 @@ export {
   LabelProps,
   ButtonProps,
   HorizontalProgressProps,
+  VideoPlayerProps,
 } from './components/index'
