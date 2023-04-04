@@ -37,10 +37,3 @@ export const IconButton: FunctionComponent<IconButtonProps> = ({
     </TouchableOpacity>
   );
 };
-
-{
-  /* <IconButton
-icon={() => <InstagramIcon width={socialIconSize} height={socialIconSize} />}
-onPress={() => openSocialMedia(SocialMediaType.instagram)}
-/> */
-}
