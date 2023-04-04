@@ -9,7 +9,7 @@ export {
   InputField,
   DashedLine,
   HeaderAppBar,
-  DividerSolidLine,
+  Divider,
   HorizontalProgress,
   WrappedList,
 } from './components/index';
@@ -23,7 +23,7 @@ export {
   DashedLineType,
   DashedLineAxisType,
   HeaderAppBarProps,
-  DividerSolidLineProps,
+  DividerProps,
   DropDownProps,
   DropDownItemProps,
   LabelProps,

@@ -16,9 +16,6 @@ export {
   DashedLineAxisType,
 } from './dashedLine/DashedLine';
 export { HeaderAppBar, HeaderAppBarProps } from './headerAppBar/headerAppBar';
-export {
-  DividerSolidLine,
-  DividerSolidLineProps,
-} from './dividerSolidLine/dividerSolidLine';
+export { Divider, DividerProps, } from './divider/Divider';
 export { HorizontalProgress, HorizontalProgressProps } from './horizontalProgress/HorizontalProgress';
 export { WrappedList}  from './wrappedList/wrappedList';

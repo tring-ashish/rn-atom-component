@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, RenderAPI } from '@testing-library/react-native';
-import { DividerSolidLine } from '../dividerSolidLine';
+import { Divider } from '../Divider';
 
 describe('<<< DividerSolidLine >>>', () => {
   let instance: RenderAPI;
   beforeEach(() => {
-    const element = <DividerSolidLine />;
+    const element = <Divider />;
     instance = render(element);
   });
 
